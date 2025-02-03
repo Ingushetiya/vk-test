@@ -1,0 +1,103 @@
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 16px;
+    gap: 8px;
+}
+
+.primary {
+    background-color: #ff7700;
+    color: white;
+}
+
+.secondary {
+    background-color: #8366561f;
+    color: black;
+}
+
+.size28 {
+    min-width: 116px;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.size36 {
+    min-width: 138px;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+.size56 {
+    min-width: 164px;
+    font-size: 18px;
+    padding: 12px 24px;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 20px;
+    padding-left: 5px;
+}
+.disabled {
+    opacity: 0.36;
+    cursor: not-allowed;
+}
+
+.loading {
+    position: relative;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pressed {
+    transform: scale(0.95);
+    opacity: 0.9;
+}
+
+.focused {
+    outline: 2px solid #005fcc;
+}
+
+.button:hover:not(.disabled) {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.button:active:not(.disabled) {
+    transform: scale(0.95);
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
